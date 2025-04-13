@@ -65,3 +65,7 @@ def recommend():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10000))  # For Render compatibility
     app.run(host="0.0.0.0", port=port, debug=False, threaded=False)
+
+@app.route('/test')
+def test():
+    return "App is working!"
